@@ -1,0 +1,333 @@
+.logo-img{
+    box-sizing: inherit;
+    width: 165px;
+    height: 36px;
+    margin-left: 7.5rem;
+    margin-right: 1rem;
+}
+
+.navbar {
+    background-color: #FFD100;
+    min-height: 63.5px;
+}
+
+
+
+.menuoptions{
+    background-color: #333533;
+    height: 40px;
+    position: fixed;
+    top: 63.5px;
+    z-index: 16;
+}
+
+
+.img_he{
+    height: 400px;
+}
+
+.carru{
+    width: 100%;
+}
+
+.text_s{
+    text-shadow: 2px 1px 1px #000;
+}
+
+.footer-left{
+    background-color: #333533;
+    height: 120px;  
+}
+
+
+.footer-right{
+    background-color:  #333533;
+    height: 120px;  
+    border-left: 0.7px solid #525252;
+}
+
+.foot_bottom{
+    background-color: #333533;
+    height: 50px; 
+    border-top:0.7px solid #525252; 
+}
+
+.f-col{
+    background-color: #333533;
+}
+
+.carousel-item > img{
+    object-fit: cover;
+}
+
+
+.empty-div{
+    height: 103.5px;
+}
+
+.a-color{
+    color:ivory;
+}
+
+.menuoption-ul{
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.menuoption-li:hover{
+    background-color: #202020;
+    border-color:   #333533;
+    font-size: 1.015rem;
+    border-bottom: solid 3px #FFEE32;
+}
+
+.menuoption-a{
+ padding-right: 1.5rem;
+ padding-left: 1.5rem;
+ line-height: 2.5rem;
+ padding-top: 0.5rem;
+}
+
+.btn-cartelera{
+    background-color:   #333533;
+    border-color:   #333533;
+    color:ivory;
+}
+
+.btn-cartelera:hover{
+    background-color:   #202020;
+    border-color:   #202020;
+    font-size: 1.015rem;
+    color:ivory;
+}
+
+.form-marggin{
+    margin-left: 4.5rem;
+}
+
+.a-color:hover{
+color: ivory;
+text-decoration: none;
+}
+
+.btn-header{
+    background-color:   #333533;
+    color: ivory;
+    margin-left: 0.5rem;
+}
+
+.btn-marggin{
+    margin-left: 7rem;
+}
+
+
+.btn-header:hover{
+    background-color:   #202020;
+    border-color:  #202020;
+    font-size: 1.015rem;
+    color:ivory;
+}
+
+.i-marggin{
+    margin-right: 1rem;
+}
+
+.shadow-focus:focus{
+    box-shadow: 0 0 0 0.1rem  #FFD100;
+    outline: 0;
+}
+
+.btn_mysensa{
+    border: 2px solid #202020;
+    margin-left: 0.5rem;
+}
+
+.color_primary{
+    background-color: #FFD100;
+}
+
+.dropdown-item-mysensa{
+    color: black;
+    text-align: center;
+    background-color: white;
+    text-decoration: none;
+}
+
+.dropdown-item-mysensa:hover{
+    color: black;
+    font-size: 1.1rem;
+    font-weight:400;
+    background-color: #d6d6d6;
+    border-bottom: 1px solid #202020;
+}
+
+.dropdown-item-mysensa2{
+    color: black;
+    text-align: center;
+    background-color: white;
+    text-decoration: none;
+}
+
+.dropdown-item-mysensa2:hover{
+    color:black;
+    font-size: 1.1rem;
+    font-weight:400;
+    background-color: #d6d6d6;
+    border-bottom: 1px solid #202020;
+}
+
+.btn_mysensa2{
+    border: 2px solid rgb(26, 137, 23);
+    margin-left: 0.5rem;
+    color: white;
+    background-color: rgb(26, 137, 23);
+}
+
+.btn_mysensa2:hover{
+    border: 2px solid rgb(26, 137, 23);
+    margin-left: 0.5rem;
+    color: white;
+    background-color: rgb(26, 137, 23);
+}
+
+.color_verde{
+    background-color: rgb(26, 137, 23);
+}
+
+.img_art{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    object-fit: scale-down;
+}
+
+.img_comm{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    object-fit: scale-down;
+}
+
+.img_card{
+    max-width: 200px;
+    height: 150px;
+    overflow: hidden;
+    object-fit:scale-down;
+}
+
+.text_grey{
+    color:#d6d6d6;
+}
+
+.cont_b{
+    border: 0.5px solid black;
+}
+
+.about-border {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ffee32;
+    margin: 20px auto;
+}
+
+.a_news{
+    color: #202020;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.a_news:hover{
+    color: #202020;
+    text-decoration: none;
+}
+
+.li_news:hover{
+border-bottom: 2px solid #ffee32 ;
+}
+
+.li_news{
+    border-bottom: 2px solid #ffffff ;
+    }
+
+    .img_news{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.p_input {
+  border: none;
+  display: inline;
+  font-family: inherit;
+  font-size: inherit;
+  padding: none;
+  width: auto;
+}
+
+.dash_img{
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.head_dash{
+    top: 0px;
+    left:5px;
+    right: 70%;
+    padding-top: 5px;
+}
+.grad_img:hover{
+    background-image: linear-gradient(to bottom,rgb(0,0,0,0.0),rgb(0,0,0,0.4));
+}
+
+.c_face:hover{
+color:rgb(30, 30, 187)
+}
+
+.c_twe:hover{
+    color:rgba(29,161,242,1.00);
+}
+
+.c_ins:hover{
+    color:tomato;
+    }
+
+.btn_sensa_priory{
+    color: #202020;
+    background-color: #FFD100;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.btn_sensa_priory:hover{
+    color: black;
+    background-color: #FFD100;
+    font-size: 1.015rem;
+    
+}
+
+.btn_sensa_priory:focus{
+    box-shadow: 0 0 0 0.2rem rgb(247, 237, 103)
+}
+
+.btn_carr{
+color: #202020;
+background-color: transparent;
+font-size: 1rem;
+font-weight: 600;
+border: 1.5px solid #FFD100
+}
+
+.btn_carr:hover{
+    color: #202020;
+    background-color: #FFD100;
+    font-size: 1.015rem;
+    font-weight: 600;
+    }
+
+ .btn_carr:focus{
+    box-shadow: 0 0 0 0.2rem rgb(247, 237, 103)
+   }

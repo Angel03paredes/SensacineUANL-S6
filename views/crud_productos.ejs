@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!--- CDN -BOOTSTRAP-JQUERY-FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b8914fb7d2.js" crossorigin="anonymous"></script>
+  <!--- CDN -BOOTSTRAP-JQUERY-FONTAWESOME -->
+  <link rel="shortcut icon" href="https://assets.sensacine.com.mx/favicon/sensacinemx.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/admin.css">
+  <script src="../js/preview_img.js" defer></script>
+  <title>Administrador</title>
+</head>
+
+<body>
+
+  <%  
+  var act = "/alta_producto"
+  var var3 ="1"
+  var var8 ="../img/imagenpreview.jpg"
+   if(typeof articulo != 'undefined'){ 
+    var var1 =  articulo.producto 
+     var var2 = articulo.precio.toFixed(2)
+      var3 = articulo.cantidad
+     var var4 = articulo.color
+     var var5 = articulo.marca
+     var var6 = articulo.modelo
+     var var7 = articulo.descripcion
+     var var8 = articulo.file
+     act = "/update_producto?id=" + articulo._id
+  }%>
+
+
+  <%- include('a_header') -%>
+
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-content-center mb-3"> 
+        <h1>Productos</h1>
+    </div>
+
+<div class="row">
+  <div class="col-5 mr-3 p-2 ml-3 card shadow" id="cont_div_form" >
+    
+    <form class="p-2" method="POST" action="<%= act %>" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="producto">Producto</label>
+        <input  type="text" class="form-control" id="producto" name="producto" aria-describedby="emailHelp" value= "<%= var1 %>">
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio</label>
+        <input type="number" class="form-control" step="0.01" id="precio" name="precio" aria-describedby="emailHelp"  value= "<%= var2 %>">
+      </div>
+      
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" class="form-control " step="1" min="1" value="1" id="cantidad" name="cantidad" aria-describedby="emailHelp" value= "<%= var3 %>">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="color">Color</label>
+          <input type="text" class="form-control" id="color" name="color" value= "<%= var4 %>" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="marca">Marca </label>
+          <input type="text" class="form-control" name="marca" marca="marca" value= "<%= var5 %>" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="modelo">Modelo</label>
+          <input type="text" class="form-control" id="modelo" name="modelo" value= "<%= var6 %>" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion" name="descripcion"  rows="3"></textarea>
+<script>
+  $('#descripcion').text("<%= var7 %>");
+</script>
+
+      </div>
+      <div class="custom-file mb-3">
+        <input type="file" class="custom-file-input" id="file" lang="es" name="file" required >
+        <label class="custom-file-label"  for="file" data-browse="Buscar">Seleccionar Imagen...</label>
+      </div>
+     <center> 
+       <img src="../img/<%= var8 %>" id="imgInp" alt="" style ="width: 200px; height: 200px; object-fit: cover;" class="mb-3">
+      </center>
+    
+      <center>
+      <% if(typeof articulo != 'undefined'){ %>
+        <a type="submit" href="/c_productos" class="btn btn-secondary">Cancelar</a>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <%  } else { %>
+         
+          <button type="submit" class="btn btn-success">Crear</button>
+          <% } %>
+      </center>
+    </form>
+  
+  </div>
+  <% if(typeof articulos != 'undefined'){ %>
+  <div class="col-6 ml-3">
+    
+    <table class="table">
+      <thead class="bg_gray">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Actualizar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+       <% for( var i = 0; i < articulos.length ; i ++ ){ %>
+        <tr>
+          <th scope="row">  <%= i + 1 %>  </th>
+          <td> <%=  articulos[i].producto %> </td>
+          <td> <%= articulos[i].cantidad %> </td>
+          <td><a type="button" href="/fill_articulos/<%= articulos[i]._id %>" class="btn btn-primary">Actualizar</a></td>
+          <td><a type="button" href="/delete_articulos/<%= articulos[i]._id %>" class="btn btn-danger">Eliminar</a></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    
+  </div>
+  <% } %>
+</div>
+
+
+
+
+</div>
+
+  <!----cierre del div a_header-->
+</div>
+  
+</body>
+
+</html>

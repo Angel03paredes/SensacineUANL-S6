@@ -1,0 +1,107 @@
+<nav class="navbar fixed-top navbar-danger navbar-expand-lg">
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="btn-resp">
+      <i class="fas fa-align-justify"></i>
+    </button>
+    <a class="navbar-brand a-image-icono d-flex justify-content-center" href="/"><img class="logo-img" id="logo-img"
+      src="https://assets.sensacine.com.mx/skin/img/sensacinemx/logo-main-0798862ef8.svg" alt="Sensacine"></a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      
+      <form class="form-inline form-marggin "  id="o_cartelera">
+        <select class="custom-select my-1 mr-sm-2 shadow-focus border-dark decorated" id="o_cartelera_select1">
+          <option selected>Escoger Lugar...</option>
+          <option value="1">Coahuila</option>
+          <option value="2">Durango</option>
+          <option value="3">Edo de México </option>
+          <option value="4">Nuevo León</option>
+          <option value="5">Guanajuato</option>
+          <option value="6">Hidalgo</option>
+          <option value="7">Jalisco</option>
+          <option value="8">Morelos</option>
+          <option value="9">Nayarit</option>
+        </select>
+        <select class="custom-select my-1 mr-sm-2 shadow-focus border-dark" id="o_cartelera_select2">
+          <option selected>Escoger Cine...</option>
+          <option value="1">Cinépolis Garza Sada</option>
+          <option value="2">Cinemex Cumbres</option>
+          <option value="1">Cinépolis Sendero</option>
+          <option value="2">Cinemex Del Valle</option>
+          <option value="1">Cinépolis Citadel</option>
+          <option value="2">Cinemex Pablo Livas</option>
+        </select>
+      
+       
+      
+        <a id="o_cartelera_btn"  href="/cartelera" type="submit" class="btn  my-1 btn-cartelera shadow-focus">Buscar Cartelera</a>
+        
+      </form>
+      <a  id="o_tienda" class="btn  my-1 btn-header btn-marggin shadow-focus" href="/tienda"><i class="fas fa-store-alt i-marggin"></i>Comprar</a>
+      <div class="dropdown">
+        <a id="o_unete" class="btn  my-1 btn_mysensa dropdown-toggle shadow-focus btnjs" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+        <i class="far fa-user i-marggin "> </i>Mi Sensacine</a>
+        <div class="dropdown-menu p-0 rounded-lg ml-2 " aria-labelledby="dropdownMenuLink">
+          <% if(usuario == null){ %>
+          <a class="dropdown-item dropdown-item-mysensa btnjs2" href="#" data-toggle="modal" data-target="#Modal-registro">Registrarse</a>
+          <a class="dropdown-item dropdown-item-mysensa btnjs2" href="#" data-toggle="modal" data-target="#Modal-sesion" >Inicia Sesión</a>
+          <%  }  %>
+          <% if(usuario != null){ %>
+            <h6 class="dropdown-header  text-center pb-2"><%= usuario.nickname %></h6>
+            <div class="dropdown-divider mt-0"></div>
+         
+          <a class=" dropdown-item dropdown-item-mysensa btnjs2" href="/perfil" >Perfil</a>
+
+          <% if(usuario.admin) { %>
+            <a class=" dropdown-item dropdown-item-mysensa btnjs2" href="/admin" >Administrar</a>
+            <% }  %>
+          <a class=" dropdown-item dropdown-item-mysensa btnjs2" href="/cerrarsession" >Cerrar Sesión</a>
+          
+          <%  }  %>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row menuoptions w-100 shadow">
+ <ul class="navbar-nav menuoption-ul" id="ul_carrito">
+  <li class="menuoption-li"  id="n">
+    <a class="a-color menuoption-a " href="/">Noticias</a>
+  </li>
+  <li class="menuoption-li" id="p">
+    <a class="a-color menuoption-a"  href="/peliculas">Películas</a>
+  </li>
+  <li class="menuoption-li" id="s">
+    <a class="a-color menuoption-a"  href="/series">Series</a>
+  </li>
+  <li class="menuoption-li" id="a">
+    <a class="a-color menuoption-a"  href="/avances">Avances</a>
+  </li>
+  <li class="menuoption-li" id="c">
+    <a class="a-color menuoption-a"  href="/carrito">  <i class="fas fa-shopping-cart"></i> </a>
+  </li>
+  <li class="menuoption-li" id="buscador">
+    <a class="a-color menuoption-a" > <i class="fas fa-search"></i></a>
+  </li>
+  
+
+
+ </ul>
+
+ <div class="input-group  pl-0 w-25 position-fixed float-right " style="  right: 1rem; display: none;"  id="buscador_input">
+  <input class=" form-control my-0 py-1 border-warning shadow-focus" type="text" placeholder="Buscar..." aria-label="Search">
+  <div class="input-group-append ">
+    <button class="input-group-text color_primary shadow-focus border-warning" id="basic-text1"><i class="fas fa-search text-grey"
+        aria-hidden="true"></i></button>
+</div>
+
+
+
+  </div>
+
+</div>
+
+<div class="row empty-div"></div>
+
+
+  <script src="js/header_search.js" ></script>
+  
+  

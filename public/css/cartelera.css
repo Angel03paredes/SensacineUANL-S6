@@ -1,0 +1,55 @@
+.btn_dark:hover{
+    background-color: #202020 ;
+    color:white;
+
+}
+.btn_dark{
+    background-color: white ;
+    color:#202020;
+    border: 2px solid #202020;
+
+}
+
+.btn_dark:focus{
+    background-color: #202020 ;
+    color:white;
+    outline: 0;
+    box-shadow: 0 0 0 0.0rem #333533;
+}
+
+.btn_border_dark:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.0rem #333533;
+}
+
+.ui-widget-header{
+    background-color: #333533 ;
+}
+
+.ui-state-default{
+    background-color: #ffee32 !important ;
+}
+
+.ui-state-default:focus{
+    background-color: #ffd100;
+    border-color:  #ffd100;
+}
+
+.box_filtro{
+    margin-bottom: 3rem;
+    background: #f5f5f5;
+    border: solid 1px #e1e3e6;
+}
+
+.bg_cartelera{
+    background-color: #ffd100;
+    color:#202020;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.img_cartelera {
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+}

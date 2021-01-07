@@ -1,0 +1,72 @@
+.introjs-button{
+    color: #202020;
+    background-color: #ffd100;
+    border-color: #ffd100;
+    font-weight: 600;
+    text-shadow: 0px 0px 0 #ffd100;
+}
+
+.introjs-button:hover{
+    color: #202020;
+    background-color: #ffd100;
+    border-color: #ffd100;
+    font-weight: 600;
+    text-shadow: 0px 0px 0 #ffd100;
+}
+
+.introjs-button:focus{
+    color: #202020;
+    background-color: #ffd100;
+    border-color: #ffd100;
+    font-weight: 600;
+    text-shadow: 0px 0px 0 #ffd100;
+}
+
+.introjs-progressbar {
+    background-color: #ffd100;
+}
+
+.help{
+    cursor: pointer; 
+    color: #ffd100;
+    width: 40px; 
+    height:35px ; 
+    border-right: 1px solid #ffee32;
+    background-color: #333533;
+     z-index: 50;
+      top: 104px; 
+      left: 0px;
+      transition: width 0.3s;
+      animation: mymove 1.5s infinite;
+}
+
+
+@keyframes mymove {
+  0% {  width:40px ; }
+  50%{  width:50px ; }
+  100%{  width:40px ; }
+}
+
+.help:hover{
+
+    cursor: pointer; 
+    color: #ffd100;
+    width: 60px; 
+    height:35px ; 
+    background-color: #333533;
+     z-index: 50;
+      top: 104px; 
+      left: 0px;
+}
+
+.i_onboarding{
+    font-size: 2rem;
+    float: right;
+    right: 1px;
+    margin-right: 5px;
+}
+
+.ui-widget {
+     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+     font-size: 1.0rem; 
+}

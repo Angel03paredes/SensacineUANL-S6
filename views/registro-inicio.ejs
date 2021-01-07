@@ -1,0 +1,75 @@
+<!---Modal de registro-->
+<div class="modal fade" id="Modal-registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST"  id="formulario">
+        <div class="modal-body">
+          
+            <div class="form-group">
+              <label for="email1">Correo electrónico</label>
+              <input name ="correo" type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="nombre@correo.com" required>
+            </div>
+              <div class="form-group">
+              <label for="nickname1">Nombre de usuario</label>
+              <input name="nickname"  type="text" class="form-control" id="nickname1" placeholder="Usuario" required>     
+            </div>
+            <div class="form-group">
+              <label for="pass1">Contraseña</label>
+              <input name="contra" type="password" class="form-control" id="pass1" required>
+              <small id="emailHelp" class="form-text text-muted">La contraseña debe ser de 8 a 20 caracteres. </small>
+            </div>
+            <div class="form-group">
+              <label for="pass2">Confirmar contraseña</label>
+              <input type="password" class="form-control" id="pass2" name="c_contra" required>
+              <small id="emailHelp" class="form-text text-muted">La contraseña y la confirmación  deben ser iguales. </small>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cartelera" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn_sensa_priory ">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!---Modal de inicio de sesion-->
+<div class="modal fade" id="Modal-sesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog  modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Inicio de sesión</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id='formulario2'>
+        <div class="modal-body">
+          
+           
+              <div class="form-group">
+              <label for="i_nick">Nombre de usuario</label>
+              <input type="text" class="form-control"  placeholder="Usuario" name="nickname" id="i_nick" required>     
+            </div>
+            <div class="form-group">
+              <label for="i_contra">Contraseña</label>
+              <input type="password" class="form-control" name="contra" id="i_contra" required>
+            </div>
+            
+            
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cartelera" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn_sensa_priory  ">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

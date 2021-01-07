@@ -1,0 +1,65 @@
+@media screen and (max-width: 991px) {
+  
+   .form-marggin{
+    margin-left: 0.5rem;
+   }
+
+    .a-image-icono{
+        position: absolute;
+        margin-right: 0rem;
+        margin-left: 2.5rem;
+        width: 90%;
+    }
+    .logo-img{
+     margin-right: 0rem;
+     margin-left: 0rem;
+    }
+
+    .btn-marggin{
+        margin-left: 0.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 275px) {
+   
+    .navbar-brand{
+        display: none !important;
+    }
+    .a-image-icono{
+        position: initial;
+        margin-left: 0rem;
+    }
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width:1150px) {
+   
+    .btn-header{
+        width: 38px;
+        height: 38px;
+        overflow: hidden;
+    }
+
+    .btn_mysensa{
+        width: 38px;
+        height: 38px;
+        overflow: hidden;
+    }
+
+    .btn-marggin{
+        margin-left: 1rem;
+    }
+.form-marggin{
+    margin-left: 3rem;
+}
+   
+}
+
+@media screen and (min-width: 992px ){
+    .logo-img{
+        display: block !important;
+    }
+}
